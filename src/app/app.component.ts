@@ -82,7 +82,7 @@ export class AppComponent {
 
       const headers = new HttpHeaders({
         'Content-Type': 'application/json',
-        Authorization: `Bearer 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`,
+        Authorization: `Bearerw`
       });
 
       const requestBody = {
