@@ -18,7 +18,7 @@ export class AppComponent {
   chatMessages: Array<{ role: string, content: string }> = [];
 
   constructor(private openaiService: OpenaiService,private http: HttpClient) {
-    const openai = new OpenAI({ apiKey: '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',dangerouslyAllowBrowser: true });
+  
 
 
   // const response: any = openai.chat.completions.create({

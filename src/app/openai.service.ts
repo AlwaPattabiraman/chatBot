@@ -7,7 +7,7 @@ import axios from 'axios';
   providedIn: 'root'
 })
 export class OpenaiService {
-  private ocrApiKey = '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'; // Replace with your OpenAI API key
+  private ocrApiKey = '';
   private ocrApiUrl = 'https://api.openai.com/v1/chat/completions'; // Change based on your use case
 
   constructor(private http: HttpClient) {}
