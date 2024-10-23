@@ -1,0 +1,29 @@
+
+
+<div class="chat-container">
+  <div class="chat-box">
+    <div *ngFor="let message of chatMessages" [ngClass]="message.role">
+      <strong *ngIf="message.role === 'user'">You: </strong>
+      <strong *ngIf="message.role === 'assistant'">AI: </strong>
+      {{ message.content }}
+    </div>
+  </div>
+
+  <div class="input-box">
+    <input [(ngModel)]="userMessage" placeholder="Type your message" />
+    <button (click)="sendMessage()">Send</button>
+  </div>
+</div>
+
+<div>
+  <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+<button (click)="convertImageToText()">Convert Image to Text</button>
+<div *ngIf="extractedText">
+  <h3>Extracted Text:</h3>
+  <p>{{ extractedText }}</p>
+</div>
+</div> 
+
+<div style="width: 50%;height: 20%;">
+<!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gfp-wisconsin-madison-the-nature-boardwalk.jpg/2560px-Gfp-wisconsin-madison-the-nature-boardwalk.jpg"> -->
+</div>
